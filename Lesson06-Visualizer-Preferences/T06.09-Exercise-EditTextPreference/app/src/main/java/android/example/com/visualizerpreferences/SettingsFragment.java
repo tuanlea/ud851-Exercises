@@ -83,6 +83,9 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
                 listPreference.setSummary(listPreference.getEntries()[prefIndex]);
             }
         }
+        if (preference instanceof EditTextPreference) {
+            preference.setSummary(value);
+        }
     }
     
     @Override
